@@ -1,0 +1,9 @@
+{
+  "trazelab": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "trazelabdb",
+    "name": "trazelab",
+    "connector": "mongodb"
+  }
+}

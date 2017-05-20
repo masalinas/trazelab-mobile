@@ -1,0 +1,24 @@
+<ion-view title="Login" id="login-view">
+    <ion-content padding="true" class="has-header">
+        <form id="login-form" class="list">
+            <div>
+                <img src="img/TxbdHcEKR5az1AGXhJAJ_thingtrack-logo.svg" style="display: block; width: 100%; height: 100px; margin-left: auto; margin-right: auto;">
+            </div>
+
+            <ion-list id="login-list">
+                <label class="item item-input" id="login-input-email">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="" auto-focus>
+                </label>
+                <label class="item item-input" id="login-input-password">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="">
+                </label>
+            </ion-list>
+
+            <div class="spacer" style="height: 40px;"></div>
+
+            <button id="login-button" class="button button-positive button-block" ng-click="vm.login()">Log in</button>
+        </form>
+    </ion-content>
+</ion-view>

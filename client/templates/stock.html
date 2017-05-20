@@ -1,0 +1,14 @@
+<ion-view title="Stock" id="stock-view">
+    <!--<ion-nav-buttons side="left" class="has-header">
+        <button class="button button-positive icon ion-home" ng-click="vm.goHome()"> Home</button>
+    </ion-nav-buttons>-->
+
+    <ion-content padding="true" class="has-header">
+        <form id="stock-form" class="list">
+            <label class="item item-input" id="stock-input-label">
+                <span class="input-label">Label</span>
+                <input id="stock-input" type="text" ng-model="vm.label" placeholder="Scan a label" auto-focus on-enter="vm.getLabel()">
+            </label>
+        </form>
+    </ion-content>
+</ion-view>
