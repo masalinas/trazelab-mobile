@@ -16,17 +16,21 @@
                 {{datetimeValue| date: "dd-MM-yyyy"}}
             </div>
 
-            <div class="item item-input" id="stock-input-product">
-                <span class="input-label">Product: </span>
-                <select class="ion-input-select">
-                    <option ng-repeat="product in vm.products">{{product}}</option>
-                </select>
-            </div>
-
             <label class="item item-input" id="stock-input-password">
                 <span class="input-label">Password</span>
                 <input type="password">
             </label>
+
+            <!--<div class="item item-input" id="stock-input-product">
+                <span class="input-label">Product: </span>
+                <select class="ion-input-select">
+                    <option ng-repeat="product in vm.products">{{product}}</option>
+                </select>
+            </div>-->
+
+            <div class="item item-select" fancy-select ng-model="person" items="vm.people" item-label="fname + ' ' + lname">
+                {{person.fname || 'Select item'}}
+            </div>
         </form>
     </ion-content>
 </ion-view>

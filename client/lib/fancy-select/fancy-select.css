@@ -1,0 +1,58 @@
+.slide-in-right {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+@media (min-width: 680px){
+    .slide-in-right.ng-leave-active {
+        bottom: 20%;
+    }
+}
+
+.slide-in-right.ng-enter,
+.slide-in-right > .ng-enter {
+    -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+    -moz-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+    -o-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+    transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+}
+
+.slide-in-right.ng-enter-active,
+.slide-in-right > .ng-enter-active {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.slide-in-right.ng-leave,
+.slide-in-right > .ng-leave {
+    -webkit-transition: all ease-in-out 250ms;
+    -moz-transition: all ease-in-out 250ms;
+    -o-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+}
+
+.fancy-select.item-select:after{
+    margin-top: -5px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid;
+    border-top-color: white;
+    border-bottom-color: white;
+    border-top: 5px solid rgba(0, 0, 0, 0);
+    border-bottom: 5px solid rgba(0, 0, 0, 0);
+    color: #999;
+}
+
+.fancy-select-modal .list{
+    margin: 0;
+}
+
+.fancy-select-modal .list  + .list .item:first-child{
+    margin-top: -2px;
+}
