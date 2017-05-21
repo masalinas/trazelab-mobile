@@ -15,6 +15,7 @@ angular.module('app.directives', [])
             }
         };
     }])
+
     .directive('onEnter', function () {
         return function (scope, element, attrs) {
             element.bind("keydown", function (event) {

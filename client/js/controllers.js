@@ -39,11 +39,14 @@ angular.module('app.controllers', [])
                     // set edit box focus
                     $timeout(function() {
                         var element = $window.document.getElementById('stock-input');
+
                         $scope.$emit('focus', element);
                         element.focus();
                     });
                 });
             };
+
+            vm.products = ['Banana', 'Orange', 'Apple'];
         }])
 
     .controller('chatCtrl', ['$scope', '$state', '$stateParams',

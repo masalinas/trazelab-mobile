@@ -6,16 +6,27 @@
 
         <title>TrazeLab</title>
 
+        <!-- ionic framework -->
         <script src="lib/ionic/js/ionic.bundle.js"></script>
 
-        <!-- Only required for Tab projects w/ pages in multiple tabs-->
+        <!-- Only required for Tab projects w/ pages in multiple tabs -->
         <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+
+        <!-- ionic datetime picker component -->
+        <script src="lib/ion-datetime-picker/ion-datetime-picker.min.js"></script>
 
         <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
         <link href="css/ionic.app.css" rel="stylesheet">
         -->
 
+        <!-- ionic style -->
         <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+        <!-- ionic datetime picker style -->
+        <link href="lib/ion-datetime-picker/ion-datetime-picker.min.css" rel="stylesheet">
+
+        <!-- TraceLab style -->
+        <link href="style/style.css" rel="stylesheet">
 
         <!--<style type="text/css">
             .platform-ios .manual-ios-statusbar-padding {
@@ -46,12 +57,14 @@
             }
         </style>-->
 
+        <!-- TraceLab application -->
         <script src="js/app.js"></script>
         <script src="js/controllers.js"></script>
         <script src="js/routes.js"></script>
         <script src="js/directives.js"></script>
         <script src="js/services.js"></script>
     </head>
+
     <body ng-app="app" animation="slide-left-right-ios7">
         <div>
             <div>

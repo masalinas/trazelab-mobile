@@ -1,0 +1,67 @@
+/* ionic datetime picker TraceLab style*/
+div.popup-head {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+
+div.popup-body {
+    padding-bottom: 0px;
+}
+
+div.popup-buttons {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+div.popup-buttons > button.button.ng-binding.button-positive, div.popup-buttons > button.button.ng-binding.button-stable {
+    min-height: 15px;
+    height: 25px;
+}
+
+/* ionic select style*/
+.ion-input-select--large,
+.ion-input-select,
+select {
+    -webkit-appearance:none;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0);
+    border:thin solid #dddddd;
+    font-weight:300;
+    display:inline;
+    vertical-align:middle;
+    color:#333;
+    padding: auto 0;
+    overflow:hidden;
+    box-sizing:border-box;
+
+}
+
+.ion-input-select--large {
+    width:420px;
+    font-size:1.6rem;
+    background-image: url(http://i.imgur.com/7rGM4IX.png);
+    text-indent:40px;
+    padding:1.2rem 0;
+}
+
+.ion-input-select {
+    width:200px;
+    font-size:1rem;
+    background-image: url(http://i.imgur.com/nA9xx1X.png);
+    text-indent:20px;
+    padding:.5rem 0;
+}
+
+option {
+    background:#444;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+:focus {
+    outline:none;
+}

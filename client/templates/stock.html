@@ -6,8 +6,26 @@
     <ion-content padding="true" class="has-header">
         <form id="stock-form" class="list">
             <label class="item item-input" id="stock-input-label">
-                <span class="input-label">Label</span>
+                <span class="input-label">Label: </span>
                 <input id="stock-input" type="text" ng-model="vm.label" placeholder="Scan a label" auto-focus on-enter="vm.getLabel()">
+            </label>
+
+            <div class="item item-icon-left" ion-datetime-picker date ng-model="datetimeValue">
+                <i class="icon ion-ios-calendar positive"></i>
+                Expedition date:
+                {{datetimeValue| date: "dd-MM-yyyy"}}
+            </div>
+
+            <div class="item item-input" id="stock-input-product">
+                <span class="input-label">Product: </span>
+                <select class="ion-input-select">
+                    <option ng-repeat="product in vm.products">{{product}}</option>
+                </select>
+            </div>
+
+            <label class="item item-input" id="stock-input-password">
+                <span class="input-label">Password</span>
+                <input type="password">
             </label>
         </form>
     </ion-content>

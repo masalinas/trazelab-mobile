@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives', 'app.services'])
+angular.module('app', ['ionic', 'ion-datetime-picker', 'app.controllers', 'app.routes', 'app.directives', 'app.services'])
     .config(function($ionicConfigProvider, $sceDelegateProvider){
         $sceDelegateProvider.resourceUrlWhitelist([ 'self','*://www.youtube.com/**', '*://player.vimeo.com/video/**']);
 
@@ -15,7 +15,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
         }
     })
 
-    .run(function($ionicPlatform) {
+    .run(function($ionicPlatform, $ionicPickerI18n) {
         $ionicPlatform.ready(function() {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard for form inputs)
             if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
@@ -28,6 +28,13 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
                 StatusBar.styleDefault();
             }
         });
+
+        // configure datetime picker
+        //$ionicPickerI18n.weekdays = ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"];
+        $ionicPickerI18n.weekdays = ["", "", "", "", "", "", ""];
+        $ionicPickerI18n.months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        $ionicPickerI18n.ok = "Ok";
+        $ionicPickerI18n.cancel = "Cancelar";
     })
 
     /*
