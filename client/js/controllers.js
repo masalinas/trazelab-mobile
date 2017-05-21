@@ -26,7 +26,9 @@ angular.module('app.controllers', [])
                 $state.go('menu.home');
             };
 
+            // scan label listener with focus
             vm.getLabel = function() {
+                // show message toast
                 var alertPopup = $ionicPopup.alert({
                     title: 'Label Code',
                     template: vm.label
@@ -36,7 +38,7 @@ angular.module('app.controllers', [])
                     // initialize edit box
                     vm.label = undefined;
 
-                    // set edit box focus
+                    // set focus
                     $timeout(function() {
                         var element = $window.document.getElementById('stock-input');
 
@@ -46,7 +48,7 @@ angular.module('app.controllers', [])
                 });
             };
 
-            vm.products = ['Banana', 'Orange', 'Apple'];
+            // people collection for fancy select list
             vm.people = [{"fname":"Ghaffar","lname":"Peterman","group":"Good"},
                              {"fname":"Arturo","lname":"Sessa","group":"Good"},
                              {"fname":"Bilal","lname":"Cox","group":"Best"},
