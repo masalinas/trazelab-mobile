@@ -18,8 +18,14 @@
 
             <div class="item item-select item-icon-left" fancy-select ng-model="person" items="vm.people" item-label="fname + ' ' + lname">
                 <i class="icon ion-ios-calendar positive"></i>
-                Product:
+                People:
                 {{person.fname || 'Select item'}}
+            </div>
+
+            <div class="item item-select item-icon-left" fancy-select ng-model="stock" items="vm.stocks" item-label="product">
+                <i class="icon ion-ios-calendar positive"></i>
+                Product:
+                {{stock.product || 'Select item'}}
             </div>
 
             <!--<div class="item item-input" id="stock-input-product">

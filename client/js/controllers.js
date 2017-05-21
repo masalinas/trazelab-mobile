@@ -1,4 +1,4 @@
-angular.module('app.controllers', [])
+angular.module('app.controllers', ['lbServices'])
     .controller('loginCtrl', ['$scope', '$state', '$stateParams',
         function ($scope, $state, $stateParams) {
             var vm = this;
@@ -18,9 +18,27 @@ angular.module('app.controllers', [])
             var vm = this;
         }])
 
-    .controller('stockCtrl', ['$scope', '$state', '$stateParams', '$ionicPopup', '$window', '$timeout',
-        function ($scope, $state, $stateParams, $ionicPopup, $window, $timeout) {
+    .controller('stockCtrl', ['$scope', '$state', '$stateParams', '$ionicPopup', '$window', '$timeout', 'Stock',
+        function ($scope, $state, $stateParams, $ionicPopup, $window, $timeout, Stock) {
             var vm = this;
+
+            function getStocks() {
+                Stock.find()
+                    .$promise
+                    .then(function(stocks, responseHeaders) {
+                            if (stocks.length > 0)
+                                vm.stocks = JSON.parse(angular.toJson(stocks));
+                            else
+                                vm.stocks = [];
+                        },
+                        function(httpResponse) {
+                            var error = httpResponse.data.error;
+                            console.log('Error querying stocks - ' + error.status + ": " + error.message);
+                        });
+            }
+
+            // recover stock
+            getStocks();
 
             vm.goHome = function() {
                 $state.go('menu.home');
